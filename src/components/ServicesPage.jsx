@@ -7,13 +7,13 @@ const segments = [
     { start: 0, end: 8, title: "Road Side Assistance" },
     { start: 8, end: 16, title: "Insurance Claims" },
     { start: 16, end: 24, title: "Car Inspection" },
-    { start: 24, end: 32, title: "AC Service" },
-    { start: 32, end: 40, title: "Interior Detailing" },
-    { start: 40, end: 48, title: "Battery Replacements" },
-    { start: 48, end: 53.3, title: "Tyre and Wheel Care" },
-    { start: 53.3, end: 61.3, title: "Denting and Tinkering" },
-    { start: 61.3, end: 69.3, title: "Painting" },
-    { start: 69.3, end: Infinity, title: "Exterior Detailing" },
+    { start: 24, end: 30, title: "AC Service" },
+    { start: 30, end: 38, title: "Interior Detailing" },
+    { start: 38, end: 46, title: "Battery Replacements" },
+    { start: 46, end: 54, title: "Tyre and Wheel Care" },
+    { start: 54, end: 62, title: "Denting and Tinkering" },
+    { start: 62, end: 70, title: "Painting" },
+    { start: 70, end: Infinity, title: "Exterior Detailing" },
 ];
 
 const ServicesPage = () => {
@@ -124,8 +124,8 @@ const ServicesPage = () => {
                                 key={i}
                                 onClick={() => jumpToSegment(i)}
                                 className={`shrink-0 px-4 py-2 rounded-full text-xs uppercase tracking-wider transition-all duration-300 border ${i === activeIndex
-                                        ? 'bg-white text-black border-white'
-                                        : 'bg-white/10 text-white/70 border-white/20 hover:bg-white/20 hover:text-white backdrop-blur-sm'
+                                    ? 'bg-white text-black border-white'
+                                    : 'bg-white/10 text-white/70 border-white/20 hover:bg-white/20 hover:text-white backdrop-blur-sm'
                                     }`}
                             >
                                 {seg.title}
