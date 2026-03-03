@@ -80,9 +80,16 @@ const ServicesPage = () => {
                         <ArrowLeft size={18} />
                         <span>Back</span>
                     </Link>
-                    <h1 className="text-xl font-serif font-bold text-white tracking-widest">
-                        GLOBAL MOTORS
-                    </h1>
+                    <img
+                        src="/gmlogo.jpg"
+                        alt="Global Motors"
+                        style={{
+                            height: '38px',
+                            width: 'auto',
+                            objectFit: 'contain',
+                            filter: 'brightness(0) invert(1)',
+                        }}
+                    />
                 </div>
             </div>
 
