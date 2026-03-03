@@ -118,7 +118,7 @@ const TourPage = () => {
             {/* Bottom: Segment Timeline */}
             <div className="absolute bottom-0 left-0 right-0 z-30 pb-8">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="flex gap-2 overflow-x-auto hide-scrollbar pb-2">
+                    <div className="flex gap-2 overflow-x-auto pb-2" style={{ WebkitOverflowScrolling: 'touch', scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                         {segments.map((seg, i) => (
                             <button
                                 key={i}
