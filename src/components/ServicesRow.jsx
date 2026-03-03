@@ -75,10 +75,11 @@ const ServicesRow = () => {
                                 cursor: 'pointer',
                                 borderRadius: '12px',
                                 overflow: 'hidden',
-                                border: '1px solid #f0f0f0',
+                                border: '1px solid #e5e7eb',
                                 backgroundColor: '#fff',
                                 boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
                                 transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                                fontFamily: "'Inter', sans-serif",
                             }}
                             whileHover={{
                                 y: -6,

@@ -75,7 +75,15 @@ const TourPage = () => {
                 <div className="max-w-7xl mx-auto flex justify-between items-center">
                     <Link
                         to="/"
-                        className="flex items-center gap-2 text-white/80 hover:text-white transition-colors text-sm uppercase tracking-widest"
+                        className="flex items-center gap-2 text-white/80 hover:text-white transition-all duration-300 text-sm uppercase tracking-widest"
+                        style={{
+                            background: 'rgba(255, 255, 255, 0.1)',
+                            backdropFilter: 'blur(8px)',
+                            WebkitBackdropFilter: 'blur(8px)',
+                            border: '1px solid rgba(255, 255, 255, 0.25)',
+                            borderRadius: '50px',
+                            padding: '8px 20px',
+                        }}
                     >
                         <ArrowLeft size={18} />
                         <span>Back</span>

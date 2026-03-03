@@ -52,16 +52,16 @@ const Footer = () => {
                     <div className="flex items-start gap-3 text-sm">
                         <Phone size={15} className="text-gray-600 mt-1 shrink-0" />
                         <div className="flex flex-wrap gap-x-6 gap-y-1">
-                            <span>9840610610</span>
-                            <span>9840610645</span>
-                            <span>9840610848</span>
-                            <span>9840610691</span>
-                            <span>9444019883</span>
+                            <a href="tel:+919840610610" style={{ color: 'inherit', textDecoration: 'none' }}>9840610610</a>
+                            <a href="tel:+919840610645" style={{ color: 'inherit', textDecoration: 'none' }}>9840610645</a>
+                            <a href="tel:+919840610848" style={{ color: 'inherit', textDecoration: 'none' }}>9840610848</a>
+                            <a href="tel:+919840610691" style={{ color: 'inherit', textDecoration: 'none' }}>9840610691</a>
+                            <a href="tel:+919444019883" style={{ color: 'inherit', textDecoration: 'none' }}>9444019883</a>
                         </div>
                     </div>
                     <div className="flex items-center gap-3 text-sm">
                         <Mail size={15} className="text-gray-600 shrink-0" />
-                        <span>service@globalmotors.com</span>
+                        <a href="mailto:service@globalmotors.com" style={{ color: 'inherit', textDecoration: 'none' }}>service@globalmotors.com</a>
                     </div>
                 </div>
 
@@ -86,8 +86,8 @@ const Footer = () => {
                                     key={branch.name}
                                     onClick={() => setActiveBranch(index)}
                                     className={`relative text-left p-5 rounded-lg border transition-all duration-300 ${activeBranch === index
-                                            ? 'border-white bg-white/5'
-                                            : 'border-gray-800 hover:border-gray-600 bg-transparent'
+                                        ? 'border-white bg-white/5'
+                                        : 'border-gray-800 hover:border-gray-600 bg-transparent'
                                         }`}
                                 >
                                     <div className="flex items-center gap-2 mb-2">
@@ -174,6 +174,9 @@ const Footer = () => {
                         <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
                         <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
                     </div>
+                </div>
+                <div className="text-center pb-4 text-[11px] text-gray-700 opacity-70 tracking-wider">
+                    Designed by Caarapace
                 </div>
             </div>
         </footer>

@@ -127,18 +127,6 @@ const ServicesDetailPage = () => {
 
     return (
         <div className="min-h-screen bg-white pt-[74px]">
-            {/* ── Page Header ── */}
-            <div className="bg-white border-b border-gray-100 px-6 py-5 flex items-center gap-4 max-w-7xl mx-auto">
-                <Link
-                    to="/"
-                    className="flex items-center gap-1.5 text-gray-500 hover:text-black transition-colors text-sm uppercase tracking-widest"
-                >
-                    <ArrowLeft size={16} />
-                    <span>Back</span>
-                </Link>
-                <span className="text-gray-200 text-lg select-none">|</span>
-                <h1 className="text-xl font-serif font-bold text-black tracking-wide">Our Services</h1>
-            </div>
 
             {/* ── Mobile category toggle ── */}
             <div className="md:hidden px-6 pt-4">
@@ -191,8 +179,8 @@ const ServicesDetailPage = () => {
                                     key={cat.key}
                                     onClick={() => setActiveKey(cat.key)}
                                     className={`w-full text-left px-5 py-3 text-sm font-medium transition-all duration-200 flex items-center gap-2 ${isActive
-                                            ? 'bg-black text-white'
-                                            : 'text-gray-700 hover:bg-gray-100 hover:text-black'
+                                        ? 'bg-black text-white'
+                                        : 'text-gray-700 hover:bg-gray-100 hover:text-black'
                                         }`}
                                 >
                                     {isActive && <ChevronRight size={14} className="shrink-0" />}
