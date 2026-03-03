@@ -110,7 +110,7 @@ function App() {
                   Tour
                 </Link>
                 <a
-                  href="#enquiry"
+                  href="/#contact"
                   onClick={() => setSidebarOpen(false)}
                   className="px-4 py-3 rounded-lg text-sm font-medium uppercase tracking-widest text-gray-700 hover:bg-gray-50 hover:text-black transition-colors"
                 >

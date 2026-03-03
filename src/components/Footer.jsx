@@ -7,21 +7,21 @@ const branches = [
         name: "Ambattur",
         address: "No. 197/2A, Perumal Kovil Street, Shanmugapuram, Kallikuppam, Ambattur, Chennai - 600 099",
         mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.2!2d80.1516!3d13.1067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5263b2e7e3f3a7%3A0x0!2zMTPCsDA2JzI0LjEiTiA4MMKwMDknMDUuOCJF!5e0!3m2!1sen!2sin!4v1700000000000",
-        mapsLink: "https://www.google.com/maps/search/No.+197+2A+Perumal+Koil+St+Shanmugapuram+Ambattur+Chennai",
+        mapsLink: "https://www.google.com/maps/place/GLOBAL+MOTORS+MULTI+CAR+SERVICE+CENTER/@13.1337287,80.1651177,14.17z/data=!4m6!3m5!1s0x3a52636ffb1317c7:0xca91d0fb76d47969!8m2!3d13.1398007!4d80.1806945!16s%2Fg%2F11f38b65wk!5m1!1e1?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D",
         tag: "Main Branch",
     },
     {
         name: "Kolathur",
         address: "Global Motors No. 150, Jasmine Nagar, Kolathur, Chennai – 600099",
         mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.0!2d80.2121!3d13.1218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5264000000001%3A0x0!2zMTPCsDA3JzE4LjUiTiA4MMKwMTInNDMuNiJF!5e0!3m2!1sen!2sin!4v1700000000001",
-        mapsLink: "https://www.google.com/maps/search/No.+150+Jasmine+Nagar+Kolathur+Chennai+600099",
+        mapsLink: "https://www.google.com/maps/place/Global+Motors+Premium+Car+Service+center/@13.1282599,80.1708388,14.25z/data=!4m6!3m5!1s0x3a526300590f9c53:0x6cfeb07d879f2dd3!8m2!3d13.1373162!4d80.1821768!16s%2Fg%2F11vy5xxhyk!5m1!1e1?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D",
         tag: null,
     },
     {
         name: "Thiruverkadu",
         address: "Plot No. C & D, Lotus Nagar, Periya Koladi Road, Koladi, Thiruverkadu, Chennai - 600 077",
         mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.3!2d80.1133!3d13.0691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5260000000001%3A0x0!2zMTPCsDA0JzA4LjgiTiA4MMKwMDYnNDcuOSJF!5e0!3m2!1sen!2sin!4v1700000000002",
-        mapsLink: "https://www.google.com/maps/search/Plot+C+D+Lotus+Nagar+Periya+Koladi+Road+Thiruverkadu+Chennai+600077",
+        mapsLink: "https://www.google.com/maps/place/Global+Motors+Multi+Car+Service+Thiruverkadu/@13.0815469,80.1147405,14.07z/data=!4m6!3m5!1s0x3a5263003715bbcf:0x271d5d59ff98a343!8m2!3d13.0880948!4d80.1306187!16s%2Fg%2F11w_nd5kdb!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D",
         tag: null,
     },
 ];
@@ -156,9 +156,10 @@ const Footer = () => {
                                 href={branches[activeBranch].mapsLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1.5 text-gray-600 hover:text-white text-xs mt-3 transition-colors"
+                                className="inline-flex items-center gap-2 text-gray-400 hover:text-white mt-4 transition-colors"
+                                style={{ fontSize: '0.95rem' }}
                             >
-                                <MapPin size={12} />
+                                <MapPin size={16} />
                                 Open {branches[activeBranch].name} in Google Maps →
                             </a>
                         </div>
@@ -175,7 +176,7 @@ const Footer = () => {
                         <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
                     </div>
                 </div>
-                <div className="text-center pb-4 text-[11px] text-gray-700 opacity-70 tracking-wider">
+                <div style={{ textAlign: 'center', paddingBottom: '16px', fontSize: '12px', color: '#ffffff', letterSpacing: '0.08em', opacity: 0.85 }}>
                     Designed by Caarapace
                 </div>
             </div>

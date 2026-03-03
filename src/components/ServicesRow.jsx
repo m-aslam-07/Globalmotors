@@ -79,7 +79,7 @@ const ServicesRow = () => {
                                 backgroundColor: '#fff',
                                 boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
                                 transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                                fontFamily: "'Inter', sans-serif",
+                                fontFamily: "'Manrope', sans-serif",
                             }}
                             whileHover={{
                                 y: -6,
