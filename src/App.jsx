@@ -71,7 +71,7 @@ function App() {
               {/* Sidebar Header */}
               <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100">
                 <img
-                  src="/gmlogo.jpg"
+                  src="/gmlogo.jpeg"
                   alt="Global Motors"
                   style={{ height: '40px', width: 'auto', objectFit: 'contain' }}
                 />

@@ -126,13 +126,14 @@ const ServicesDetailPage = () => {
     const activeCategory = CATEGORIES.find((c) => c.key === activeKey) || CATEGORIES[0];
 
     return (
-        <div className="min-h-screen bg-white pt-[74px]">
+        <div className="min-h-screen pt-[74px]" style={{ backgroundColor: '#f9fafb' }}>
 
             {/* ── Mobile category toggle ── */}
-            <div className="md:hidden px-6 pt-4">
+            <div className="md:hidden px-5 pt-5 pb-2">
                 <button
                     onClick={() => setMobileOpen(!mobileOpen)}
-                    className="w-full flex items-center justify-between border border-gray-200 rounded-xl px-5 py-3 text-sm font-semibold text-gray-800 bg-gray-50"
+                    className="w-full flex items-center justify-between rounded-xl px-5 py-3.5 text-sm font-semibold text-gray-800"
+                    style={{ background: '#fff', border: '1px solid #e5e7eb', boxShadow: '0 1px 4px rgba(0,0,0,0.06)' }}
                 >
                     <span>{activeCategory.label}</span>
                     <ChevronRight
@@ -147,13 +148,20 @@ const ServicesDetailPage = () => {
                             animate={{ height: 'auto', opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
                             transition={{ duration: 0.25 }}
-                            className="overflow-hidden border border-gray-200 rounded-xl mt-1 bg-white shadow-md"
+                            className="overflow-hidden mt-1 bg-white shadow-md"
+                            style={{ borderRadius: '12px', border: '1px solid #e5e7eb' }}
                         >
                             {CATEGORIES.map((cat) => (
                                 <button
                                     key={cat.key}
                                     onClick={() => { setActiveKey(cat.key); setMobileOpen(false); }}
-                                    className={`w-full text-left px-5 py-3 text-sm transition-colors ${activeKey === cat.key ? 'bg-black text-white font-semibold' : 'text-gray-700 hover:bg-gray-50'}`}
+                                    className="w-full text-left px-5 py-3.5 text-sm transition-colors"
+                                    style={{
+                                        fontWeight: activeKey === cat.key ? '700' : '500',
+                                        color: activeKey === cat.key ? '#111' : '#4b5563',
+                                        background: activeKey === cat.key ? '#f3f4f6' : 'transparent',
+                                        borderLeft: activeKey === cat.key ? '3px solid #111' : '3px solid transparent',
+                                    }}
                                 >
                                     {cat.label}
                                 </button>
@@ -164,12 +172,30 @@ const ServicesDetailPage = () => {
             </div>
 
             {/* ── Two-column layout ── */}
-            <div className="max-w-7xl mx-auto flex gap-0 md:gap-8 px-4 md:px-6 py-6 md:py-10">
+            <div className="max-w-7xl mx-auto flex gap-0 md:gap-8 px-4 md:px-8 py-6 md:py-12">
 
                 {/* ── Sidebar (desktop only) ── */}
-                <aside className="hidden md:flex flex-col w-64 shrink-0">
-                    <div className="sticky top-[90px] bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden">
-                        <p className="px-5 pt-5 pb-3 text-xs uppercase tracking-widest text-gray-400 font-semibold">
+                <aside className="hidden md:flex flex-col w-72 shrink-0">
+                    <div
+                        className="sticky"
+                        style={{
+                            top: '90px',
+                            background: '#ffffff',
+                            borderRadius: '16px',
+                            border: '1px solid #e5e7eb',
+                            boxShadow: '0 2px 12px rgba(0,0,0,0.05)',
+                            overflow: 'hidden',
+                        }}
+                    >
+                        <p style={{
+                            padding: '20px 20px 12px',
+                            fontSize: '0.7rem',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.18em',
+                            color: '#9ca3af',
+                            fontWeight: '700',
+                            borderBottom: '1px solid #f3f4f6',
+                        }}>
                             Categories
                         </p>
                         {CATEGORIES.map((cat) => {
@@ -178,13 +204,22 @@ const ServicesDetailPage = () => {
                                 <button
                                     key={cat.key}
                                     onClick={() => setActiveKey(cat.key)}
-                                    className={`w-full text-left px-5 py-3 text-sm font-medium transition-all duration-200 flex items-center gap-2 ${isActive
-                                        ? 'bg-black text-white'
-                                        : 'text-gray-700 hover:bg-gray-100 hover:text-black'
-                                        }`}
+                                    className="w-full text-left transition-all duration-200"
+                                    style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '10px',
+                                        padding: '13px 20px',
+                                        fontSize: '0.875rem',
+                                        fontWeight: isActive ? '700' : '500',
+                                        color: isActive ? '#111' : '#4b5563',
+                                        background: isActive ? '#f9fafb' : 'transparent',
+                                        borderLeft: isActive ? '3px solid #111' : '3px solid transparent',
+                                        borderBottom: '1px solid #f3f4f6',
+                                    }}
                                 >
-                                    {isActive && <ChevronRight size={14} className="shrink-0" />}
-                                    <span className={isActive ? '' : 'pl-[18px]'}>{cat.label}</span>
+                                    {isActive && <ChevronRight size={13} style={{ flexShrink: 0, color: '#111' }} />}
+                                    <span style={{ paddingLeft: isActive ? 0 : '23px' }}>{cat.label}</span>
                                 </button>
                             );
                         })}
@@ -202,25 +237,67 @@ const ServicesDetailPage = () => {
                             transition={{ duration: 0.3, ease: 'easeOut' }}
                         >
                             {/* Category Title */}
-                            <div className="mb-8">
-                                <h2 className="text-2xl md:text-3xl font-serif font-bold text-black mb-2">
+                            <div style={{ marginBottom: '32px' }}>
+                                <h2 style={{
+                                    fontSize: '1.75rem',
+                                    fontFamily: 'Georgia, serif',
+                                    fontWeight: '700',
+                                    color: '#111',
+                                    marginBottom: '10px',
+                                    lineHeight: 1.2,
+                                }}>
                                     {activeCategory.label}
                                 </h2>
-                                <div className="w-12 h-0.5 bg-black" />
+                                <div style={{ width: '40px', height: '2px', background: '#111', borderRadius: '2px' }} />
+                                <p style={{ marginTop: '10px', fontSize: '0.875rem', color: '#9ca3af' }}>
+                                    {activeCategory.subServices.length} service{activeCategory.subServices.length !== 1 ? 's' : ''} available
+                                </p>
                             </div>
 
                             {/* Sub-services grid */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div style={{
+                                display: 'grid',
+                                gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
+                                gap: '16px',
+                            }}>
                                 {activeCategory.subServices.map((sub, i) => (
                                     <motion.div
                                         key={sub}
                                         initial={{ opacity: 0, y: 10 }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.25, delay: i * 0.05 }}
-                                        className="flex items-start gap-3 p-5 rounded-xl border border-gray-100 bg-white shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-default"
+                                        transition={{ duration: 0.22, delay: i * 0.05 }}
+                                        style={{
+                                            background: '#ffffff',
+                                            border: '1px solid #eaeaea',
+                                            borderRadius: '10px',
+                                            padding: '20px 22px',
+                                            display: 'flex',
+                                            alignItems: 'flex-start',
+                                            gap: '14px',
+                                            cursor: 'default',
+                                            boxShadow: '0 1px 4px rgba(0,0,0,0.04)',
+                                            transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+                                            fontFamily: "'Inter', sans-serif",
+                                        }}
+                                        whileHover={{
+                                            y: -4,
+                                            boxShadow: '0 8px 24px rgba(0,0,0,0.1)',
+                                        }}
                                     >
-                                        <span className="mt-0.5 w-2 h-2 rounded-full bg-black shrink-0" />
-                                        <span className="text-gray-800 text-sm font-medium leading-snug">
+                                        <span style={{
+                                            marginTop: '5px',
+                                            width: '7px',
+                                            height: '7px',
+                                            borderRadius: '50%',
+                                            background: '#111',
+                                            flexShrink: 0,
+                                        }} />
+                                        <span style={{
+                                            fontSize: '0.9rem',
+                                            fontWeight: '500',
+                                            color: '#1f2937',
+                                            lineHeight: '1.5',
+                                        }}>
                                             {sub}
                                         </span>
                                     </motion.div>
@@ -235,3 +312,4 @@ const ServicesDetailPage = () => {
 };
 
 export default ServicesDetailPage;
+

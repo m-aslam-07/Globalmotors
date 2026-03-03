@@ -50,9 +50,9 @@ const Header = ({ onMenuOpen }) => {
                     style={{ gap: '10px', textDecoration: 'none' }}
                 >
                     <img
-                        src="/gmlogo.jpg"
+                        src="/gmlogo.jpeg"
                         alt="Global Motors"
-                        style={{ height: '54px', width: 'auto', objectFit: 'contain', transform: 'scale(1.05)', transformOrigin: 'center' }}
+                        style={{ height: '48px', width: 'auto', objectFit: 'contain', maxWidth: '160px' }}
                     />
                     <span className="hidden md:inline" style={{ fontSize: '1.45rem', fontWeight: '700', letterSpacing: '0.15em', color: '#111', fontFamily: 'serif', whiteSpace: 'nowrap' }}>GLOBAL MOTORS</span>
                 </a>

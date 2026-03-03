@@ -81,7 +81,7 @@ const ServicesPage = () => {
                         <span>Back</span>
                     </Link>
                     <img
-                        src="/gmlogo.jpg"
+                        src="/gmlogo.jpeg"
                         alt="Global Motors"
                         style={{
                             height: '38px',
