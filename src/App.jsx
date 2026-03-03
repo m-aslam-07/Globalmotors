@@ -146,12 +146,15 @@ function App() {
 
                         {/* Logo + Brand Text */}
                         <a href="/" className="flex-shrink-0 flex items-center" style={{ gap: '10px', textDecoration: 'none' }}>
+                          {/* DEPLOYMENT NOTE: Vite serves /public files at root → src="/gmlogo.jpg" is correct.
+                               On Render (Linux), paths are CASE-SENSITIVE. Verify the exact filename
+                               on disk matches this path character-for-character (e.g. .jpg not .JPG). */}
                           <img
                             src="/gmlogo.jpg"
                             alt="Global Motors"
                             style={{ height: '54px', width: 'auto', objectFit: 'contain', transform: 'scale(1.05)', transformOrigin: 'left center' }}
                           />
-                          <span style={{ fontSize: '1.05rem', fontWeight: '700', letterSpacing: '0.15em', color: '#111', fontFamily: 'serif', whiteSpace: 'nowrap' }}>GLOBAL MOTORS</span>
+                          <span style={{ fontSize: '1.45rem', fontWeight: '700', letterSpacing: '0.15em', color: '#111', fontFamily: 'serif', whiteSpace: 'nowrap' }}>GLOBAL MOTORS</span>
                         </a>
                       </div>
 
